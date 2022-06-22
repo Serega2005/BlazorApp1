@@ -1,0 +1,46 @@
+﻿@page "/ProductAdding"
+
+@using System.ComponentModel.DataAnnotations
+@using BlazorApp1.Data
+@using BlazorApp1.Entities
+
+@inject AppDbContext DbContext;
+
+<h3>ProductAdding</h3>
+
+<EditForm Model="_model" OnValidSubmit="AddProduct">
+    <DataAnnotationsValidator/>
+    Название: <InputText @bind-Value="_model.Name"></InputText>
+    <br/>
+    Цена: <InputNumber @bind-Value="_model.Price"></InputNumber>
+    <ValidationSummary/>
+    <input type="submit" value="Добавить"/>
+</EditForm>
+<div>@_message</div>
+
+@code {
+        public const string Href = "/ProductAdding";
+    private ProductAddingModel _model = new ProductAddingModel();
+    private string _message = "";
+
+    private class ProductAddingModel
+    {
+        [MinLength(3)]
+        [RegularExpression(@"[А-Яа-я\w ]+")]
+        public string Name { get; set; } = "";
+        
+        [Range(0, 1_000_000_000)]
+        public double Price { get; set; }
+    }
+
+    private async Task AddProduct()
+    {
+        _message = "Добавление товара...";
+        await Task.Yield();
+        var product = new Product(Guid.NewGuid(), _model.Name, (decimal) _model.Price); 
+        await DbContext.Products.AddAsync(product);
+        await DbContext.SaveChangesAsync();
+        _message = $"Товар {product.Name} добавлен";
+    }
+
+}
