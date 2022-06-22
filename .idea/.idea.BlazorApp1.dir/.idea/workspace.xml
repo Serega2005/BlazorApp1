@@ -5,8 +5,8 @@
     <projectFile profileName="IIS Express">BlazorApp1.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3972a9c5-bdb9-4695-b514-933da1ccf679" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BlazorApp1.dir/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlazorApp1.dir/.idea/.gitignore" afterDir="false" />
+    <list default="true" id="3972a9c5-bdb9-4695-b514-933da1ccf679" name="Changes" comment="update gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BlazorApp1.dir/.idea/.gitignore" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,8 +71,16 @@
       <option name="presentableId" value="Default" />
       <updated>1655730866870</updated>
       <workItem from="1655730912958" duration="9358000" />
-      <workItem from="1655898985871" duration="595000" />
+      <workItem from="1655898985871" duration="939000" />
     </task>
+    <task id="LOCAL-00001" summary="update gitignore">
+      <created>1655899676588</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655899676588</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,5 +101,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="update gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="update gitignore" />
   </component>
 </project>
